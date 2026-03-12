@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 헤더 */
+
+.header {
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+/* 컨테이너 */
+
+.container {
+    max-width: 760px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* 포스트 */
+
+.post {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid #eee;
+    transition: all 0.15s ease;
+}
+
+.post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #111;
+}
+
+.title:hover {
+    color: #12b886;
+}
+
+.summary {
+    margin-top: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.meta {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.tag {
+    margin-left: 10px;
+    color: #12b886;
+}
+
+/* 뒤로가기 */
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #12b886;
+    font-weight: 500;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+/* 글 보기 */
+
+.post-view {
+    background: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 16px;
+    border: 1px solid #eee;
+}
+
+.post-view h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+#content {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+#content p {
+    margin-bottom: 16px;
+}

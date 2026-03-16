@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>오승찬 블로그</title>
+    <title>카테고리</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,26 +22,17 @@
             </nav>
         </div>
     </header>
-
     <main class="layout">
 
-        <!-- 글 목록 -->
         <section class="posts-section">
 
-            <h2>최신 포스트</h2>
+            <a class="back" href="index.html">← 메인으로 돌아가기</a>
 
-            <div id="posts" class="post-grid"></div>
+            <h2 id="category-title"></h2>
 
-            <!-- 페이지네이션 -->
-            <div class="pagination">
-                <button>Prev</button>
-                <button>1</button>
-                <button>2</button>
-                <button>Next</button>
-            </div>
+            <div id="posts"></div>
 
         </section>
-
         <!-- 사이드바 -->
         <aside class="sidebar">
 
@@ -75,14 +66,13 @@
             </div>
 
         </aside>
-
     </main>
 
     <footer class="footer">
         © 2026 오승찬 블로그
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/category.js"></script>
 
 </body>
 

@@ -1,3 +1,9 @@
+/* 기본 */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background: #f8f9fa;
@@ -9,15 +15,25 @@ body {
 .header {
     background: white;
     border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header-inner {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+    max-width: 1100px;
+    padding: 18px 20px;
     display: flex;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #111;
 }
 
 nav a {
@@ -27,15 +43,29 @@ nav a {
     font-weight: 500;
 }
 
-/* 컨테이너 */
-
-.container {
-    max-width: 760px;
-    margin: auto;
-    padding: 40px 20px;
+nav a:hover {
+    color: #12b886;
 }
 
-/* 포스트 */
+/* 메인 레이아웃 */
+
+.layout {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+}
+
+/* 글 목록 */
+
+#posts {
+    width: 100%;
+}
+
+/* 포스트 카드 */
 
 .post {
     background: white;
@@ -77,28 +107,91 @@ nav a {
 .tag {
     margin-left: 10px;
     color: #12b886;
+    cursor: pointer;
 }
 
-/* 뒤로가기 */
+/* 사이드바 */
 
-.back {
-    display: inline-block;
+.sidebar .card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #eee;
     margin-bottom: 20px;
-    text-decoration: none;
-    color: #12b886;
-    font-weight: 500;
 }
 
-.back:hover {
-    text-decoration: underline;
+.sidebar h3 {
+    margin-top: 0;
 }
 
-/* 글 보기 */
+/* 검색 */
+
+#search {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+/* 프로필 */
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* 페이지네이션 */
+
+.pagination {
+    margin-top: 30px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+}
+
+/* 푸터 */
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+.container {
+    animation: fadein .4s ease;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 글 페이지 */
+
+.post-container {
+    max-width: 760px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
 .post-view {
     background: white;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px;
     border-radius: 16px;
     border: 1px solid #eee;
 }
@@ -114,11 +207,48 @@ nav a {
     margin-bottom: 30px;
 }
 
+#post-tag {
+    margin-left: 10px;
+    color: #12b886;
+}
+
+/* 돌아가기 */
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+.back:hover {
+    color: #12b886;
+}
+
+/* 마크다운 본문 */
+
 #content {
-    line-height: 1.8;
-    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+#content h2 {
+    margin-top: 40px;
 }
 
 #content p {
-    margin-bottom: 16px;
+    margin: 16px 0;
+}
+
+#content img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#content pre {
+    background: #282c34;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    overflow: auto;
 }

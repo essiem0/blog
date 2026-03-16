@@ -15,12 +15,23 @@ fetch("/posts.json")
         document.getElementById("post-title").innerText = post.title;
         document.getElementById("post-date").innerText = post.date;
 
-        // 글 내용 불러오기
-        fetch(`/posts/${post.file}.html`)
+        const tagEl = document.getElementById("post-tag");
+        if (tagEl && post.tag) tagEl.innerText = post.tag;
+
+        // Markdown 글 불러오기
+        fetch(`/posts/${post.file}.md`)
             .then(res => res.text())
-            .then(text => {
-                document.getElementById("content").innerHTML =
-                    text.split("\n").map(line => `<p>${line}</p>`).join("");
+            .then(md => {
+
+                const html = marked.parse(md);
+
+                document.getElementById("content").innerHTML = html;
+
             });
 
     });
+
+
+document.querySelectorAll("pre code").forEach(el => {
+    hljs.highlightElement(el);
+});

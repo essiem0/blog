@@ -3,32 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>글 보기</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title id="title"></title>
+    <script src=" https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <header class="header">
         <div class="header-inner">
-            <h1>
-                <a href="/" class="logo">오승찬 블로그</a>
-            </h1>
-
-            <nav>
-                <a href="/">Home</a>
-                <a href="/">Posts</a>
-                <a href="#">About</a>
-            </nav>
+            <h1> <a href="/" class="logo">오승찬 블로그</a> </h1>
+            <nav> <a href="#">Home</a> <a href="#">Posts</a> <a href="#">About</a> </nav>
         </div>
     </header>
 
     <main class="post-container">
 
-        <a class="back" href="/">← 목록으로 돌아가기</a>
+        <a class="back" href="#" onclick="history.back(); return false;">← 목록으로 돌아가기</a>
 
         <article class="post-view">
 
@@ -50,6 +43,7 @@
     </footer>
 
     <script src="js/post.js"></script>
+    <script src="js/sidebar.js"></script>
 
 </body>
 

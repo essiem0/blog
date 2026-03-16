@@ -27,6 +27,7 @@ body {
     margin: auto;
     justify-content: space-between;
     align-items: center;
+    text-decoration: none
 }
 
 .logo {
@@ -184,7 +185,7 @@ nav a:hover {
 /* 글 페이지 */
 
 .post-container {
-    max-width: 760px;
+    max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
 }
@@ -210,6 +211,11 @@ nav a:hover {
 #post-tag {
     margin-left: 10px;
     color: #12b886;
+}
+
+#content img {
+    display: block;
+    margin: 20px auto;
 }
 
 /* 돌아가기 */

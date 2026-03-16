@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>카테고리</title>
+    <title>카테고리-오승찬 블로그</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -11,15 +11,8 @@
 
     <header class="header">
         <div class="header-inner">
-            <h1>
-                <a href="/" class="logo">오승찬 블로그</a>
-            </h1>
-
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Posts</a>
-                <a href="#">About</a>
-            </nav>
+            <h1> <a href="/" class="logo">오승찬 블로그</a> </h1>
+            <nav> <a href="#">Home</a> <a href="#">Posts</a> <a href="#">About</a> </nav>
         </div>
     </header>
     <main class="layout">
@@ -34,38 +27,7 @@
 
         </section>
         <!-- 사이드바 -->
-        <aside class="sidebar">
-
-            <!-- 검색 -->
-            <div class="card">
-                <h3>검색</h3>
-                <input type="text" placeholder="글을 검색해라" id="search">
-            </div>
-
-            <!-- 카테고리 -->
-            <!-- 카테고리 -->
-            <div class="card">
-                <h3>카테고리</h3>
-                <ul>
-                    <li><a href="category.html?category=1인1프로젝트"
-                            style="text-decoration:none; color:inherit;">1인1프로젝트</a></li>
-                    <li><a href="category.html?category=개발" style="text-decoration:none; color:inherit;">개발</a></li>
-                    <li><a href="category.html?category=성공적인학교생활" style="text-decoration:none; color:inherit;">성공적인
-                            학교생활</a></li>
-                    <li><a href="category.html?category=2027수능만점자의길"
-                            style="text-decoration:none; color:inherit;">2027수능만점자의길</a></li>
-                </ul>
-            </div>
-
-
-            <!-- 프로필 -->
-            <div class="card profile">
-                <img src="https://i.pravatar.cc/100">
-                <h3>오승찬</h3>
-                <p>개발 공부 블로그</p>
-            </div>
-
-        </aside>
+        <div id="sidebar"></div>
     </main>
 
     <footer class="footer">
@@ -73,6 +35,7 @@
     </footer>
 
     <script src="js/category.js"></script>
+    <script src="js/sidebar.js"></script>
 
 </body>
 

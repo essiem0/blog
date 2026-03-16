@@ -11,7 +11,7 @@ fetch("/posts.json")
             document.getElementById("content").innerText = "글을 찾을 수 없습니다.";
             return;
         }
-
+        document.getElementById("title").innerText = post.title;
         document.getElementById("post-title").innerText = post.title;
         document.getElementById("post-date").innerText = post.date;
 

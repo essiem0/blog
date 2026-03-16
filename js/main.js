@@ -32,19 +32,21 @@ function renderPosts(posts) {
     div.className = "post";
 
     div.innerHTML = `
-      <a class="title" href="post.html?post=${post.file}">
-        ${post.title}
+    <a class="title" href="post.html?post=${post.file}">
+      ${post.title}
+    </a>
+
+    <p class="summary">
+      ${post.summary}
+    </p>
+
+    <div class="meta">
+      <span>${post.date}</span>
+      <a style="text-decoration:none;" class="tag" href="category.html?category=${post.category}">
+        ${post.category}
       </a>
-
-      <p class="summary">
-        ${post.summary}
-      </p>
-
-      <div class="meta">
-        <span>${post.date}</span>
-        <span class="tag">${post.category}</span>
-      </div>
-    `;
+    </div>
+  `;
 
     container.appendChild(div);
 
